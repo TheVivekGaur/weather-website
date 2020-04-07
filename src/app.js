@@ -4,8 +4,9 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast  = require('./utils/forecast')
 
-const app = express()   //it doesnt not take any argument instead we figure out ways for server n tell expredss what it should do
-// Define paths for express config
+const app = express()   
+const port = process.env.PORT || 3000
+
 const publicDirectoryPath =path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
@@ -100,13 +101,6 @@ app.get('/help',(req, res)=>{
       })
     })
 
-
- //this tells what the server had to do when someone tries to get resouces at specific url maybe we should sending back htlm or json
-
-//app.com  // here we have only one domain app.com and all others will run on s=a single express server
-//app.com/help
-//app.com/about
-
-app.listen(3000, ()=> {
- console.log('server is up on port 3000') //starting the server is always async process
-})  //port 3000 works well for viewing in our local machine
+app.listen(port, ()=> {
+ console.log('server is up on port' + port) 
+})  
