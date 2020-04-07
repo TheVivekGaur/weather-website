@@ -13,7 +13,7 @@ request({ url: url , json: true } , (error, response) => {
     callback('Unable to find the location' , undefined)
   }
    else {
-    callback(undefined ,response.body.weather[0].description + ' Presently ' + '.It is currently ' + response.body.main.temp + ' celsius out there '+'And Humidity is '+ response.body.main.humidity+' out there! ')
+    callback(undefined , 'Hello, It is '+ response.body.weather[0].description + ' Presently ' + ' And the Temperature currently is ' + response.body.main.temp + ' celsius out there. '+' Humidity is '+ response.body.main.humidity+'% out there whereas ' +' The maximum temperature is '+ response.body.main.temp_max + ' celsius out there' + ' ,with the minimum temperature as '+ response.body.main.temp_min + ' celsius. ' + ' Hope You have a Great Day! ')
   }
  
 })
