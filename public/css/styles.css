@@ -1,4 +1,8 @@
+
 body {
+    background-image: url("/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     color: #333333;
     font-family: arial;
     max-width:  650px;
@@ -36,7 +40,8 @@ header a {
     text-decoration: none;
 }
 .portrait {
-    width: 250px;
+    width: 270px;
+    height:300px;
 }
 
 input{
